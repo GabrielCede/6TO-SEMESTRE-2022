@@ -56,7 +56,7 @@ const encuentro_D =[
 
 ]
 
-//Información sobre el pronóstico
+//Información sobre el pronóstico deportivo
 
 const pronostico =[
 
@@ -92,7 +92,44 @@ const pronostico =[
 ]
 
 
-//Se recorre la lista con el bucle forEach para mostrar los datos de los apostadores.
+//Se recorre la lista con el bucle forEach para mostrar los datos de los arreglos...
+
+console.log(" ")
+console.log("Datos de los apostadores")
+console.log(" ")
+
 apostador.forEach(elemento => {
-    console.log(elemento)
+    console.log( elemento)
+    
+    
 });
+
+
+//Se recorre la lista con el bucle for para mostrar los datos de los arreglos...
+
+console.log(" ")
+console.log("Datos de los encuentros deportivos")
+console.log(" ")
+
+
+for(i=0; i<encuentro_D.length;i++){
+
+    console.log(encuentro_D [i]);
+}
+
+//Se recorre la lista con el método map para mostrar los datos de los arreglos...
+
+console.log(" ")
+console.log("Datos de los pronósticos deportivos")
+console.log(" ")
+
+pronostico.map(function(pronostico){
+    console.log(pronostico)
+});
+
+
+
+
+
+
+
