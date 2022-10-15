@@ -245,7 +245,7 @@ const connectionURL= "mongodb+srv://EIGI:7777@cluster0.yaxkm.mongodb.net/test";
         //Mostrar los datos de los pronósticos
         const pronosticos =   await pronostico.find()
     
-                    console.log(pronostico )
+                    console.log(pronosticos )
 
         //#endregion
 
