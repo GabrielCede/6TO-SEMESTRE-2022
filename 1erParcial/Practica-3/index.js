@@ -242,6 +242,10 @@ const connectionURL= "mongodb+srv://EIGI:7777@cluster0.yaxkm.mongodb.net/test";
         const encuentro_D3Save=  await encuentro_D3.save();
 
         
+        //Mostrar los datos de los pronósticos
+        const pronosticos =   await pronostico.find()
+    
+                    console.log(pronostico )
 
         //#endregion
 
