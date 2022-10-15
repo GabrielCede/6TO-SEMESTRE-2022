@@ -4,7 +4,7 @@
 const mongoose = require('mongoose');
 
 //La cadena de caracteres que me permite conectarme a mi nube en el servidor de MongoDB
-const connectionURL= "mongodb+srv://EIGI:eigi1999@cluster0.yaxkm.mongodb.net/test";
+const connectionURL= "mongodb+srv://EIGI:7777@cluster0.yaxkm.mongodb.net/test";
 
 
 
@@ -67,8 +67,8 @@ const connectionURL= "mongodb+srv://EIGI:eigi1999@cluster0.yaxkm.mongodb.net/tes
         const apostador1=  new apostador(
             {
                 nombre:"Edison Aguirre",
-                identificacion:0958564367
-                
+                identificacion:0958564367,
+                idpronostico: pronostico1Save._id
                
             }
             );
@@ -79,7 +79,8 @@ const connectionURL= "mongodb+srv://EIGI:eigi1999@cluster0.yaxkm.mongodb.net/tes
         const apostador2=  new apostador(
             {
                 nombre:"Carlos Palma",
-                identificacion:0958564485
+                identificacion:0958564485,
+                idpronostico: pronostico2Save._id
                
             }
             );
@@ -90,7 +91,8 @@ const connectionURL= "mongodb+srv://EIGI:eigi1999@cluster0.yaxkm.mongodb.net/tes
         const apostador3=  new apostador(
             {
                 nombre:"karla Cedeño",
-                identificacion:0958564123
+                identificacion:0958564123,
+                idpronostico: pronostico3Save._id
                
             }
             );
@@ -101,7 +103,8 @@ const connectionURL= "mongodb+srv://EIGI:eigi1999@cluster0.yaxkm.mongodb.net/tes
         const apostador4=  new apostador(
             {
                 nombre:"Gabriel Cedeño",
-                identificacion:0958156947
+                identificacion:0958156947,
+                idpronostico: pronostico4Save._id
                
             }
             );
@@ -112,7 +115,8 @@ const connectionURL= "mongodb+srv://EIGI:eigi1999@cluster0.yaxkm.mongodb.net/tes
         const apostador5=  new apostador(
             {
                 nombre:"Anette Moreno",
-                identificacion:0958156741
+                identificacion:0958156741,
+                idpronostico: pronostico5Save._id
                
             }
             );
@@ -124,7 +128,9 @@ const connectionURL= "mongodb+srv://EIGI:eigi1999@cluster0.yaxkm.mongodb.net/tes
         const pronostico1=  new pronostico(
             {
                 resultado_propuesto:"Pasto de Grama 2 Goles - Real Furcia 1 Gol ",
-                valor_apuesta:"20.00$"
+                valor_apuesta:"20.00$",
+                idapostador:apostador1Save._id ,
+                idencuentro_D:encuentro_D3Save._id
                
             }
             );
@@ -136,7 +142,9 @@ const connectionURL= "mongodb+srv://EIGI:eigi1999@cluster0.yaxkm.mongodb.net/tes
         const pronostico2=  new pronostico(
             {
                 resultado_propuesto:"Minabo de Kiev 0 Goles - Vodka Juniors 1 Gol ",
-                valor_apuesta:"10.00$"
+                valor_apuesta:"10.00$",
+                idapostador:apostador2Save._id ,
+                idencuentro_D:encuentro_D1Save._id
                
             }
             );
@@ -147,7 +155,9 @@ const connectionURL= "mongodb+srv://EIGI:eigi1999@cluster0.yaxkm.mongodb.net/tes
         const pronostico3=  new pronostico(
             {
                 resultado_propuesto:"Aston Birra 1 Gol - Yayo Vallecano 1 Gol ",
-                valor_apuesta:"30.00$"
+                valor_apuesta:"30.00$",
+                idapostador:apostador3Save._id ,
+                idencuentro_D:encuentro_D2Save._id
                
             }
             );
@@ -158,7 +168,9 @@ const connectionURL= "mongodb+srv://EIGI:eigi1999@cluster0.yaxkm.mongodb.net/tes
         const pronostico4=  new pronostico(
             {
                 resultado_propuesto:"Minabo de Kiev 1 Gol - Vodka Juniors 1 Gol ",
-                valor_apuesta:"10.00$"
+                valor_apuesta:"10.00$",
+                idapostador:apostador4Save._id ,
+                idencuentro_D:encuentro_D1Save._id
                
             }
             );
@@ -169,7 +181,9 @@ const connectionURL= "mongodb+srv://EIGI:eigi1999@cluster0.yaxkm.mongodb.net/tes
         const pronostico5=  new pronostico(
             {
                 resultado_propuesto:"Pasto de Grama 5 Goles - Real Furcia 0 Gol ",
-                valor_apuesta:"50.00$"
+                valor_apuesta:"50.00$",
+                idapostador:apostador5Save._id ,
+                idencuentro_D:encuentro_D3Save._id
                
             }
             );
@@ -191,7 +205,8 @@ const connectionURL= "mongodb+srv://EIGI:eigi1999@cluster0.yaxkm.mongodb.net/tes
                 nombre_Eq1:"Minabo de Kiev",
                 nombre_Eq2:"Vodka Juniors",
                 fecha:"20/09/2022",
-                hora:"3:00 PM"
+                hora:"3:00 PM",
+                
                          
             }
             );
