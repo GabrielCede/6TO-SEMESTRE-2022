@@ -55,15 +55,15 @@ app.post('/', (req,res)=>{
 app.put('/', (req,res)=>{
     const {identificacion, nombre} = req.body;
     
-    let apostador =  apostador.filter(p=> p.identificacion === identificacion)[0] || {}
+    let apostadors =  apostador.filter(p=> p.identificacion === identificacion)[0] || {}
 
-    apostador.nombre = nombre;
+    apostadors.nombre= nombre;
     
 
     res.status(200).send(
         {
             message:"dato modificado correctamente",
-            response: apostador
+            response: apostadors
         }
     )
 
@@ -73,7 +73,7 @@ app.put('/', (req,res)=>{
 
 app.delete('/:identificacion', (req,res)=>{
     const {identificacion} =  req.params;
-    apostador = apostador.filter(p => p.identificacion !== identificacion);
+    apostador = apostadors.filter(p => p.identificacion !== identificacion);
     res.status(200).send({
         response:"Se eliminó el apostador con éxito!"
     })
