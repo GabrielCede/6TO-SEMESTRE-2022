@@ -29,7 +29,7 @@ const PronosticoSchema = Schema(
 );
 
 PronosticoSchema.methods.toJSON = function(){
-    const { __v,  status,  ...data   } =  this.toObject();
+    const { __v, ...data   } =  this.toObject();
     return data;
 }
 

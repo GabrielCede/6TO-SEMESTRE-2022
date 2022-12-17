@@ -34,6 +34,12 @@ const updatePronostico= async (req, res=response)=>{
     res.json(updatePronostico);
 }
 
+//Buscar Pronostico
+const getPronostico = async (req, res= response)=>{
+    const {id} = req.params
+    const pronostico=  await Pronostico.findById(id);
+    res.json(pronostico);
+}
 
 //Eliminar UN Pronostico
 
@@ -46,5 +52,7 @@ const deletePronostico= async (req, res = response)=>{
 module.exports = {
     
     createPronostico,
+    updatePronostico,
+    getPronostico,
     deletePronostico
 };
