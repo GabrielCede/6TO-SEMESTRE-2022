@@ -1,0 +1,33 @@
+version: '3'
+
+
+services:
+  apostador:
+    build: ./Microservice/apostador
+    depends_on:
+      - mongo
+    environment:
+      - PORT=9999
+      - MONGODB_CNN=mongodb://mongo:27017/apostador
+  encuentrodeportivo:
+    build: ./Microservice/encuentrodeportivo
+    depends_on:
+      - mongo
+    environment:
+      - PORT=9999
+      - MONGODB_CNN=mongodb://mongo:27017/encuentrodeportivo
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - apostador
+      - encuentrodeportivo
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
